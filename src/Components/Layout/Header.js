@@ -10,7 +10,7 @@ const Header = (props) =>{
             <CartButton></CartButton>
         </header>
         <div className={classes['main-image']}>
-            <img src={tableFoodImg} />
+            <img src={tableFoodImg} alt="table full of food"/>
         </div>
     </Fragment>
 }
