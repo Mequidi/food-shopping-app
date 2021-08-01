@@ -6,7 +6,7 @@ const MealItem = (props) =>{
 
     const price = `$${props.price}`
 
-    return <li className={classes.meal}>
+    return <li className={props.id=="m4"?`${classes["last-mealitem"]} ${classes.meal}`:classes.meal}>
         <div >
             <h3>{props.name}</h3>
             <div className={classes.description}>{props.description}</div>
