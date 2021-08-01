@@ -1,18 +1,31 @@
-// import logo from './logo.svg';
 import './App.css';
-import { Fragment } from 'react';
+import { useState } from 'react';
 import Header from './Components/Layout/Header';
 import Meals from './Components/Meals/Meals';
 import Cart from './Components/Cart/Cart'
+import CartProvider from './Store/CartProvider';
 
 function App() {
-return (
-  <Fragment>
-    <Header></Header>
-    <Meals></Meals>
-    <Cart></Cart>
-  </Fragment>
-  );
-}
+
+  const [showCart,setShowCart] = useState(false);
+
+  const showCartHandler = () =>{
+    setShowCart(true);
+  }
+
+  const hideCartHandler = () =>{
+    setShowCart(false);
+  }
+  
+  return (
+    <CartProvider>
+      {showCart && <Cart onHideCart = {hideCartHandler} />}
+      <Header onShowCart = {showCartHandler}></Header>
+      <main>
+        <Meals></Meals>
+      </main>
+    </CartProvider>
+    );
+  }
 
 export default App;
