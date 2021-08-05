@@ -25,6 +25,7 @@ function App() {
         <Meals></Meals>
       </main>
     </CartProvider>
+    
     );
   }
 
