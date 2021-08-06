@@ -7,6 +7,16 @@
   .meals-ul:last-child{
     border-bottom: none;
   }
+  .meals-loading{
+    margin-top: 1rem;
+    text-align: center;
+    color: white;
+  }
+.meals-error{
+	margin-top: 1rem;
+	text-align: center;
+	color: crimson;
+}
   
   .meals ul {
     list-style: none;
